@@ -36,7 +36,7 @@ def test_get_mask_account_when_empty():
     assert get_mask_account('') == 'No account number'
 
 def test_get_mask_account_when_space():
-    assert get_mask_account(' ') == 'No account number'
+    assert get_mask_account(' ') == 'Wrong account number format'
 
 def test_get_mask_account_when_trailing_space():
     assert get_mask_account('          73654108430135874305     ') == '**4305'
@@ -48,12 +48,12 @@ def test_get_mask_account_when_number_and_text():
     assert get_mask_account('Account number 73654108430135874305') == '**4305'
 
 def test_get_mask_account_when_only_text():
-    assert get_mask_account('Account number c55') == 'No card number'
+    assert get_mask_account('Account number c55') == 'Wrong account number format'
 
 def test_get_mask_account_when_less_than_20_digits():
-    assert get_mask_account('736541084301358743051') == 'Wrong card number format'
+    assert get_mask_account('736541084301358743051') == 'Wrong account number format'
 
 def test_get_mask_account_when_more_than_20_digits():
-    assert get_mask_account('7365410843013587430') == 'Wrong card number format'
+    assert get_mask_account('7365410843013587430') == 'Wrong account number format'
 
 
