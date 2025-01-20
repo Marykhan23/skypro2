@@ -16,9 +16,6 @@ def test_get_mask_card_number_when_trailing_space():
 def test_get_mask_card_number_when_text():
     assert get_mask_card_number('Card number 7000792289606361') == '7000 79** **** 6361'
 
-def test_get_mask_card_number_when_number_and_text():
-    assert get_mask_card_number('Card number 7000792289606361') == '7000 79** **** 6361'
-
 def test_get_mask_card_number_when_only_text():
     assert get_mask_card_number('Card number c55') == 'No card number'
 
@@ -42,9 +39,6 @@ def test_get_mask_account_when_trailing_space():
     assert get_mask_account('          73654108430135874305     ') == '**4305'
 
 def test_get_mask_account_when_text():
-    assert get_mask_account('Account number 73654108430135874305') == '**4305'
-
-def test_get_mask_account_when_number_and_text():
     assert get_mask_account('Account number 73654108430135874305') == '**4305'
 
 def test_get_mask_account_when_only_text():
