@@ -1,5 +1,6 @@
-import src.masks as masks
 from datetime import datetime
+
+import src.masks as masks
 
 
 def mask_account_card(number: str) -> str:
@@ -22,11 +23,11 @@ def get_date(date: str) -> str:
         datetime_formatted = datetime.fromisoformat(date)
         print("datetime_formatted = " + str(datetime_formatted))
         date_formatted = (
-                datetime_formatted.strftime("%d")
-                + "."
-                + datetime_formatted.strftime("%m")
-                + "."
-                + datetime_formatted.strftime("%Y")
+            datetime_formatted.strftime("%d")
+            + "."
+            + datetime_formatted.strftime("%m")
+            + "."
+            + datetime_formatted.strftime("%Y")
         )
         return date_formatted
     except ValueError:

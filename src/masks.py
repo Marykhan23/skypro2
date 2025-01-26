@@ -10,7 +10,7 @@ def get_mask_card_number(card_number: str) -> str:
         return "Wrong card number format"
     card_num_with_spaces = ""
     for i in range(0, len(mask_card_number), 4):
-        card_num_with_spaces += mask_card_number[i:i+4] + " "
+        card_num_with_spaces += mask_card_number[i:i + 4] + " "
     card_num_with_spaces = card_num_with_spaces[:-1]
     return card_num_with_spaces
 
