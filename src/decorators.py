@@ -9,24 +9,28 @@ def log(filename=""):
             try:
                 result = function(*args, **kwargs)
                 if filename:
-                    with open(f"{filename}.txt", 'a') as file:
+                    with open(f"{filename}.txt", "a") as file:
                         file.write(f"{log_time} {function.__name__} OK\n")
                 else:
                     print(f"{log_time} {function.__name__} OK\n")
                 return result
             except Exception as e:
                 if filename:
-                    with open(f"{filename}.txt", 'a') as file:
+                    with open(f"{filename}.txt", "a") as file:
                         file.write(f"{log_time} {function.__name__} error: {e}. Inputs: {args}, {kwargs}\n")
                 else:
                     print(f"{log_time} {function.__name__} error: {e}\n")
                 raise e
+
         return wrapper
+
     return inner_decorator
 
-@log("log1")
+
+@log()
 def divide_number(x, y):
-    return x/y
+    return x / y
+
 
 try:
     divide_number(3, 0)
