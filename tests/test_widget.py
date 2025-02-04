@@ -6,7 +6,7 @@ from src.widget import mask_account_card
 
 ## tests for mask_account_card
 @pytest.mark.parametrize(
-    "test_data, expected",
+    "data, expected",
     [
         ("Maestro 1596837868705199", "Maestro 1596 83** **** 5199"),
         ("Visa Gold 5999414228426353", "Visa Gold 5999 41** **** 6353"),
@@ -30,7 +30,7 @@ def test_mask_account_card_with_parameters(test_data, expected):
 
 
 @pytest.mark.parametrize(
-    "test_data, expected",
+    "data, expected",
     [
         ("2024-03-11T02:26:18.671407", "11.03.2024"),
         ("2024-03-11", "11.03.2024"),

@@ -1,4 +1,4 @@
-from src.test_data.transactions import dic
+from src.data.transactions import dic
 
 
 def filter_by_currency(m: dic, cur):

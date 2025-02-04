@@ -3,6 +3,7 @@ import time
 
 
 def log(filename=""):
+
     def inner_decorator(function):
         def wrapper(*args, **kwargs):
             log_time = datetime.datetime.now()
