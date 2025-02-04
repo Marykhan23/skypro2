@@ -60,12 +60,12 @@
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
-            <a id="prevFileLink" class="nav" href="z_145eef247bfb46b6___init___py.html">&#xab; prev</a> &nbsp; &nbsp;
+            <a id="prevFileLink" class="nav" href="z_145eef247bfb46b6_generators_py.html">&#xab; prev</a> &nbsp; &nbsp;
             <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
             <a id="nextFileLink" class="nav" href="z_145eef247bfb46b6_processing_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.10">coverage.py v7.6.10</a>,
-            created at 2025-01-18 21:02 +1100
+            created at 2025-01-27 17:12 +1100
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -82,7 +82,7 @@
 <main id="source">
     <p class="run"><span class="n"><a id="t1" href="#t1">1</a></span><span class="t"><span class="key">def</span> <span class="nam">get_mask_card_number</span><span class="op">(</span><span class="nam">card_number</span><span class="op">:</span> <span class="nam">str</span><span class="op">)</span> <span class="op">-></span> <span class="nam">str</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t2" href="#t2">2</a></span><span class="t">    <span class="str">"""Masks card number to the format **XXX"""</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t3" href="#t3">3</a></span><span class="t">    <span class="nam">mask_card_number</span> <span class="op">=</span> <span class="str">''</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t3" href="#t3">3</a></span><span class="t">    <span class="nam">mask_card_number</span> <span class="op">=</span> <span class="str">""</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t4" href="#t4">4</a></span><span class="t">    <span class="key">for</span> <span class="nam">i</span> <span class="key">in</span> <span class="nam">card_number</span><span class="op">.</span><span class="nam">strip</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">split</span><span class="op">(</span><span class="str">" "</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t5" href="#t5">5</a></span><span class="t">        <span class="key">if</span> <span class="nam">i</span><span class="op">.</span><span class="nam">isdigit</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t6" href="#t6">6</a></span><span class="t">            <span class="nam">mask_card_number</span> <span class="op">=</span> <span class="nam">i</span><span class="op">.</span><span class="nam">strip</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">replace</span><span class="op">(</span><span class="nam">i</span><span class="op">[</span><span class="num">6</span><span class="op">:</span><span class="num">12</span><span class="op">]</span><span class="op">,</span> <span class="str">"******"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -92,14 +92,14 @@
     <p class="run"><span class="n"><a id="t10" href="#t10">10</a></span><span class="t">        <span class="key">return</span> <span class="str">"Wrong card number format"</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t11" href="#t11">11</a></span><span class="t">    <span class="nam">card_num_with_spaces</span> <span class="op">=</span> <span class="str">""</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t12" href="#t12">12</a></span><span class="t">    <span class="key">for</span> <span class="nam">i</span> <span class="key">in</span> <span class="nam">range</span><span class="op">(</span><span class="num">0</span><span class="op">,</span> <span class="nam">len</span><span class="op">(</span><span class="nam">mask_card_number</span><span class="op">)</span><span class="op">,</span> <span class="num">4</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t13" href="#t13">13</a></span><span class="t">        <span class="nam">card_num_with_spaces</span> <span class="op">+=</span> <span class="nam">mask_card_number</span><span class="op">[</span><span class="nam">i</span><span class="op">:</span><span class="nam">i</span><span class="op">+</span><span class="num">4</span><span class="op">]</span> <span class="op">+</span> <span class="str">" "</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t13" href="#t13">13</a></span><span class="t">        <span class="nam">card_num_with_spaces</span> <span class="op">+=</span> <span class="nam">mask_card_number</span><span class="op">[</span><span class="nam">i</span> <span class="op">:</span> <span class="nam">i</span> <span class="op">+</span> <span class="num">4</span><span class="op">]</span> <span class="op">+</span> <span class="str">" "</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t14" href="#t14">14</a></span><span class="t">    <span class="nam">card_num_with_spaces</span> <span class="op">=</span> <span class="nam">card_num_with_spaces</span><span class="op">[</span><span class="op">:</span><span class="op">-</span><span class="num">1</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t15" href="#t15">15</a></span><span class="t">    <span class="key">return</span> <span class="nam">card_num_with_spaces</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t16" href="#t16">16</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t17" href="#t17">17</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t18" href="#t18">18</a></span><span class="t"><span class="key">def</span> <span class="nam">get_mask_account</span><span class="op">(</span><span class="nam">account_number</span><span class="op">:</span> <span class="nam">str</span><span class="op">)</span> <span class="op">-></span> <span class="nam">str</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t19" href="#t19">19</a></span><span class="t">    <span class="str">"""Masks account number to the format XXXX XX** **** XXXX"""</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t20" href="#t20">20</a></span><span class="t">    <span class="nam">mask_account_number</span> <span class="op">=</span> <span class="str">''</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t20" href="#t20">20</a></span><span class="t">    <span class="nam">mask_account_number</span> <span class="op">=</span> <span class="str">""</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t21" href="#t21">21</a></span><span class="t">    <span class="key">for</span> <span class="nam">i</span> <span class="key">in</span> <span class="nam">account_number</span><span class="op">.</span><span class="nam">strip</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">split</span><span class="op">(</span><span class="str">" "</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t22" href="#t22">22</a></span><span class="t">        <span class="key">if</span> <span class="nam">i</span><span class="op">.</span><span class="nam">isdigit</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t23" href="#t23">23</a></span><span class="t">            <span class="nam">account_number</span> <span class="op">=</span> <span class="nam">i</span>&nbsp;</span><span class="r"></span></p>
@@ -113,12 +113,12 @@
 <footer>
     <div class="content">
         <p>
-            <a class="nav" href="z_145eef247bfb46b6___init___py.html">&#xab; prev</a> &nbsp; &nbsp;
+            <a class="nav" href="z_145eef247bfb46b6_generators_py.html">&#xab; prev</a> &nbsp; &nbsp;
             <a class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
             <a class="nav" href="z_145eef247bfb46b6_processing_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.6.10">coverage.py v7.6.10</a>,
-            created at 2025-01-18 21:02 +1100
+            created at 2025-01-27 17:12 +1100
         </p>
     </div>
 </footer>
