@@ -1,9 +1,11 @@
 import datetime
 import time
+from functools import wraps
 
 
 def log(filename=""):
     def inner_decorator(function):
+        @wraps(function)
         def wrapper(*args, **kwargs):
             log_time = datetime.datetime.now()
             try:
@@ -29,18 +31,21 @@ def log(filename=""):
 
 @log()
 def divide_number(x, y):
+    """docstring for Divide Number"""
     return x / y
 
 
-try:
-    divide_number(3, 0)
-except Exception as e:
-    print(e)
-time.sleep(3)
+# try:
+#     divide_number(3, 0)
+# except Exception as e:
+#     print(e)
+# time.sleep(3)
 
-try:
-    divide_number(3, "u")
-except Exception as e:
-    print(e)
-time.sleep(3)
-divide_number(3, 1)
+help(divide_number(3, 1))
+
+# try:
+#     divide_number(3, "u")
+# except Exception as e:
+#     print(e)
+# time.sleep(3)
+# divide_number(3, 1)
