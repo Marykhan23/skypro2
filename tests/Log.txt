@@ -1,8 +1,0 @@
-2025-01-27 16:41:12.856860 divide_number error: division by zero. Inputs: (3, 0), {}
-2025-01-27 16:41:15.858916 divide_number error: unsupported operand type(s) for /: 'int' and 'str'. Inputs: (3, 'u'), {}
-2025-01-27 16:41:18.861184 divide_number OK
-2025-01-27 16:41:18.906797 divide_number OK
-2025-01-27 16:43:29.882331 divide_number error: division by zero. Inputs: (3, 0), {}
-2025-01-27 16:43:32.884691 divide_number error: unsupported operand type(s) for /: 'int' and 'str'. Inputs: (3, 'u'), {}
-2025-01-27 16:43:35.886479 divide_number OK
-2025-01-27 16:43:35.892480 divide_number OK
